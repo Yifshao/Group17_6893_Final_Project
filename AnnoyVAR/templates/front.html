@@ -1,0 +1,333 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>EECS E6893 Group 17 Final Project</h1>
+
+<form action="getvar" name='form_name' method="POST">
+  {% csrf_token %}
+  Please enter the company code: <input id='company' type="text" name="company"><br><br>
+  Is this impulse or response? <select id="choose" name="imorre">
+  <option value="impulse">impulse</option>
+  <option value="response">response</option>
+  </select>
+  <input type="submit" value="GO">
+</form>
+
+<!--<h1>{{result}}</h1>-->
+<p id="demo"></p>
+
+<table border = "1">
+  <tr>
+    <th>Company Name</th>
+    <th>Similarity</th>
+    <th>Day1 Prediction</th>
+    <th>Day2 Prediction</th>
+    <th>Day3 Prediction</th>
+    <th>Day4 Prediction</th>
+    <th>Day5 Prediction</th>
+    <th>Day6 Prediction</th>
+    <th>Day7 Prediction</th>
+    <th>Day8 Prediction</th>
+    <th>Day9 Prediction</th>
+    <th>Day10 Prediction</th>
+  </tr>
+  <tr>
+    <th id="name1"></th>
+    <th id="similar1"></th>
+    <th id="price11"></th>
+    <th id="price12"></th>
+    <th id="price13"></th>
+    <th id="price14"></th>
+    <th id="price15"></th>
+    <th id="price16"></th>
+    <th id="price17"></th>
+    <th id="price18"></th>
+    <th id="price19"></th>
+    <th id="price110"></th>
+  </tr>
+  <tr>
+    <th id="name2"></th>
+    <th id="similar2"></th>
+    <th id="price21"></th>
+    <th id="price22"></th>
+    <th id="price23"></th>
+    <th id="price24"></th>
+    <th id="price25"></th>
+    <th id="price26"></th>
+    <th id="price27"></th>
+    <th id="price28"></th>
+    <th id="price29"></th>
+    <th id="price210"></th>
+  </tr>
+  <tr>
+    <th id="name3"></th>
+    <th id="similar3"></th>
+    <th id="price31"></th>
+    <th id="price32"></th>
+    <th id="price33"></th>
+    <th id="price34"></th>
+    <th id="price35"></th>
+    <th id="price36"></th>
+    <th id="price37"></th>
+    <th id="price38"></th>
+    <th id="price39"></th>
+    <th id="price310"></th>
+  </tr>
+  <tr>
+    <th id="name4"></th>
+    <th id="similar4"></th>
+    <th id="price41"></th>
+    <th id="price42"></th>
+    <th id="price43"></th>
+    <th id="price44"></th>
+    <th id="price45"></th>
+    <th id="price46"></th>
+    <th id="price47"></th>
+    <th id="price48"></th>
+    <th id="price49"></th>
+    <th id="price410"></th>
+  </tr>
+  <tr>
+    <th id="name5"></th>
+    <th id="similar5"></th>
+    <th id="price51"></th>
+    <th id="price52"></th>
+    <th id="price53"></th>
+    <th id="price54"></th>
+    <th id="price55"></th>
+    <th id="price56"></th>
+    <th id="price57"></th>
+    <th id="price58"></th>
+    <th id="price59"></th>
+    <th id="price510"></th>
+  </tr>
+  <tr>
+    <th id="name6"></th>
+    <th id="similar6"></th>
+    <th id="price61"></th>
+    <th id="price62"></th>
+    <th id="price63"></th>
+    <th id="price64"></th>
+    <th id="price65"></th>
+    <th id="price66"></th>
+    <th id="price67"></th>
+    <th id="price68"></th>
+    <th id="price69"></th>
+    <th id="price610"></th>
+  </tr>
+  <tr>
+    <th id="name7"></th>
+    <th id="similar7"></th>
+    <th id="price71"></th>
+    <th id="price72"></th>
+    <th id="price73"></th>
+    <th id="price74"></th>
+    <th id="price75"></th>
+    <th id="price76"></th>
+    <th id="price77"></th>
+    <th id="price78"></th>
+    <th id="price79"></th>
+    <th id="price710"></th>
+  </tr>
+  <tr>
+    <th id="name8"></th>
+    <th id="similar8"></th>
+    <th id="price81"></th>
+    <th id="price82"></th>
+    <th id="price83"></th>
+    <th id="price84"></th>
+    <th id="price85"></th>
+    <th id="price86"></th>
+    <th id="price87"></th>
+    <th id="price88"></th>
+    <th id="price89"></th>
+    <th id="price810"></th>
+  </tr>
+  <tr>
+    <th id="name9"></th>
+    <th id="similar9"></th>
+    <th id="price91"></th>
+    <th id="price92"></th>
+    <th id="price93"></th>
+    <th id="price94"></th>
+    <th id="price95"></th>
+    <th id="price96"></th>
+    <th id="price97"></th>
+    <th id="price98"></th>
+    <th id="price99"></th>
+    <th id="price910"></th>
+  </tr>
+  <tr>
+    <th id="name10"></th>
+    <th id="similar10"></th>
+    <th id="price101"></th>
+    <th id="price102"></th>
+    <th id="price103"></th>
+    <th id="price104"></th>
+    <th id="price105"></th>
+    <th id="price106"></th>
+    <th id="price107"></th>
+    <th id="price108"></th>
+    <th id="price109"></th>
+    <th id="price1010"></th>
+  </tr>
+
+</table>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<!-- Color Scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script>
+  // set the dimensions and margins of the graph
+  var margin = {top: 10, right: 100, bottom: 30, left: 30},
+          width = 600 - margin.left - margin.right,
+          height = 400 - margin.top - margin.bottom;
+
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
+
+  // Read the data
+  // var Data = {"valueA":[2,3,10],"valueB":[4,15,6],"valueC":[5,6,7]}
+  var Data = {{result | safe}}
+  const keys = Object.keys(Data);
+  Data.time=[1,2,3,4,5,6,7,8,9,10]
+  var data = []
+  for (let i = 1; i < Data[keys[0]].length; i++) {
+    ele = {}
+    for (let j = 0; j < keys.length; j++) {
+      ele[keys[j]] = Data[keys[j]][i]
+      ele.time = Data.time[i-1]
+    }
+    data.push(ele);
+  }
+
+
+  var lowest = keys.map(function(x){return Math.min(...Data[x].slice(-10))});
+  var highest = keys.map(function(x){return Math.max(...Data[x].slice(-10))});
+  y_min = Math.min(...lowest)*1.5
+  y_max = Math.max(...highest)*1.5
+
+  // List of groups (here I have one group per column)
+  var allGroup = keys
+
+  // Reformat the data: we need an array of arrays of {x, y} tuples
+  var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+    return {
+      name: grpName,
+      values: data.map(function(d) {
+        return {time: d.time, value: +d[grpName]};
+      })
+    };
+  });
+
+  // A color scale: one color for each group
+  var myColor = d3.scaleOrdinal()
+          .domain(allGroup)
+          .range(d3.schemeTableau10);
+
+  // Add X axis --> it is a date format
+  var x = d3.scaleLinear()
+          .domain([0,14])
+          .range([ 0, width ]);
+  svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+          .domain( [y_min,y_max])
+          .range([ height, 0 ]);
+  svg.append("g")
+          .call(d3.axisLeft(y));
+
+  // Add the lines
+  var line = d3.line()
+          .x(function(d) { return x(+d.time) })
+          .y(function(d) { return y(+d.value) })
+  svg.selectAll("myLines")
+          .data(dataReady)
+          .enter()
+          .append("path")
+          .attr("class", function(d){ return d.name })
+          .attr("d", function(d){ return line(d.values) } )
+          .attr("stroke", function(d){ return myColor(d.name) })
+          .style("stroke-width", 4)
+          .style("fill", "none")
+
+  // Add the points
+  svg
+          // First we need to enter in a group
+          .selectAll("myDots")
+          .data(dataReady)
+          .enter()
+          .append('g')
+          .style("fill", function(d){ return myColor(d.name) })
+          .attr("class", function(d){ return d.name })
+          // Second we need to enter in the 'values' part of this group
+          .selectAll("myPoints")
+          .data(function(d){ return d.values })
+          .enter()
+          .append("circle")
+          .attr("cx", function(d) { return x(d.time) } )
+          .attr("cy", function(d) { return y(d.value) } )
+          .attr("r", 5)
+          .attr("stroke", "white")
+
+  // // Add a label at the end of each line
+  // svg
+  //         .selectAll("myLabels")
+  //         .data(dataReady)
+  //         .enter()
+  //         .append('g')
+  //         .append("text")
+  //         .attr("class", function(d){ return d.name })
+  //         .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
+  //         .attr("transform", function(d) { return "translate(" + x(d.value.time) + "," + y(d.value.value) + ")"; }) // Put the text at the position of the last point
+  //         .attr("x", 12) // shift the text a bit more right
+  //         .text(function(d) { return d.name; })
+  //         .style("fill", function(d){ return myColor(d.name) })
+  //         .style("font-size", 15)
+
+  // Add a legend (interactive)
+  svg
+          .selectAll("myLegend")
+          .data(dataReady)
+          .enter()
+          .append('g')
+          .append("text")
+          // .attr('x', function(d,i){ return 30 + i*40})
+          // .attr('y', 30)
+          .attr('x', 400)
+          .attr('y', function(d,i){ return 30 + i*20})
+          .text(function(d) { return d.name; })
+          .style("fill", function(d){ return myColor(d.name) })
+          .style("font-size", 15)
+          .on("click", function(d){
+            // is the element currently visible ?
+            currentOpacity = d3.selectAll("." + d.name).style("opacity")
+            // Change the opacity: from 0 to 1 or from 1 to 0
+            d3.selectAll("." + d.name).transition().style("opacity", currentOpacity == 1 ? 0:1)
+
+          })
+</script>
+
+<script src="{% static "js/front.js" %}"></script>
+<script>
+  var Data= {{ result | safe}}
+  front(Data);
+</script>
+{% endblock %}
