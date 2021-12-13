@@ -218,11 +218,26 @@ function front(data) {
         document.getElementById("name3").innerHTML = "";
         document.getElementById("name4").innerHTML = "";
         document.getElementById("name5").innerHTML = "";
+        document.getElementById("name6").innerHTML = "";
+        document.getElementById("name7").innerHTML = "";
+        document.getElementById("name8").innerHTML = "";
+        document.getElementById("name9").innerHTML = "";
+        document.getElementById("name10").innerHTML = "";
         document.getElementById("similar1").innerHTML = "";
         document.getElementById("similar2").innerHTML = "";
         document.getElementById("similar3").innerHTML = "";
         document.getElementById("similar4").innerHTML = "";
         document.getElementById("similar5").innerHTML = "";
+        document.getElementById("similar6").innerHTML = "";
+        document.getElementById("similar7").innerHTML = "";
+        document.getElementById("similar8").innerHTML = "";
+        document.getElementById("similar9").innerHTML = "";
+        document.getElementById("similar10").innerHTML = "";
+        document.getElementById("recommend1").innerHTML = "";
+        document.getElementById("recommend2").innerHTML = "";
+        document.getElementById("recommend3").innerHTML = "";
+        document.getElementById("recommend4").innerHTML = "";
+        document.getElementById("recommend5").innerHTML = "";
         document.getElementById("price11").innerHTML = "";
         document.getElementById("price12").innerHTML = "";
         document.getElementById("price13").innerHTML = "";
@@ -248,6 +263,31 @@ function front(data) {
         document.getElementById("price53").innerHTML = "";
         document.getElementById("price54").innerHTML = "";
         document.getElementById("price55").innerHTML = "";
+        document.getElementById("price61").innerHTML = "";
+        document.getElementById("price62").innerHTML = "";
+        document.getElementById("price63").innerHTML = "";
+        document.getElementById("price64").innerHTML = "";
+        document.getElementById("price65").innerHTML = "";
+        document.getElementById("price71").innerHTML = "";
+        document.getElementById("price72").innerHTML = "";
+        document.getElementById("price73").innerHTML = "";
+        document.getElementById("price74").innerHTML = "";
+        document.getElementById("price75").innerHTML = "";
+        document.getElementById("price81").innerHTML = "";
+        document.getElementById("price82").innerHTML = "";
+        document.getElementById("price83").innerHTML = "";
+        document.getElementById("price84").innerHTML = "";
+        document.getElementById("price85").innerHTML = "";
+        document.getElementById("price91").innerHTML = "";
+        document.getElementById("price92").innerHTML = "";
+        document.getElementById("price93").innerHTML = "";
+        document.getElementById("price94").innerHTML = "";
+        document.getElementById("price95").innerHTML = "";
+        document.getElementById("price101").innerHTML = "";
+        document.getElementById("price102").innerHTML = "";
+        document.getElementById("price103").innerHTML = "";
+        document.getElementById("price104").innerHTML = "";
+        document.getElementById("price105").innerHTML = "";
     }
     else{
         if(document.getElementById("choose").options[0].selected){
@@ -258,11 +298,21 @@ function front(data) {
             document.getElementById("name3").innerHTML = resultlist[2];
             document.getElementById("name4").innerHTML = resultlist[3];
             document.getElementById("name5").innerHTML = resultlist[4];
+            document.getElementById("name6").innerHTML = resultlist[5];
+            document.getElementById("name7").innerHTML = resultlist[6];
+            document.getElementById("name8").innerHTML = resultlist[7];
+            document.getElementById("name9").innerHTML = resultlist[8];
+            document.getElementById("name10").innerHTML = resultlist[9];
             document.getElementById("similar1").innerHTML = similar1[0];
             document.getElementById("similar2").innerHTML = similar1[1];
             document.getElementById("similar3").innerHTML = similar1[2];
             document.getElementById("similar4").innerHTML = similar1[3];
             document.getElementById("similar5").innerHTML = similar1[4];
+            document.getElementById("similar6").innerHTML = similar1[5];
+            document.getElementById("similar7").innerHTML = similar1[6];
+            document.getElementById("similar8").innerHTML = similar1[7];
+            document.getElementById("similar9").innerHTML = similar1[8];
+            document.getElementById("similar10").innerHTML = similar1[9];
             document.getElementById("price11").innerHTML = valuelist1[0];
             document.getElementById("price12").innerHTML = valuelist1[1];
             document.getElementById("price13").innerHTML = valuelist1[2];
@@ -288,6 +338,31 @@ function front(data) {
             document.getElementById("price53").innerHTML = valuelist5[2];
             document.getElementById("price54").innerHTML = valuelist5[3];
             document.getElementById("price55").innerHTML = valuelist5[4];
+            document.getElementById("price61").innerHTML = valuelist6[0];
+            document.getElementById("price62").innerHTML = valuelist6[1];
+            document.getElementById("price63").innerHTML = valuelist6[2];
+            document.getElementById("price64").innerHTML = valuelist6[3];
+            document.getElementById("price65").innerHTML = valuelist6[4];
+            document.getElementById("price71").innerHTML = valuelist7[0];
+            document.getElementById("price72").innerHTML = valuelist7[1];
+            document.getElementById("price73").innerHTML = valuelist7[2];
+            document.getElementById("price74").innerHTML = valuelist7[3];
+            document.getElementById("price75").innerHTML = valuelist7[4];
+            document.getElementById("price81").innerHTML = valuelist8[0];
+            document.getElementById("price82").innerHTML = valuelist8[1];
+            document.getElementById("price83").innerHTML = valuelist8[2];
+            document.getElementById("price84").innerHTML = valuelist8[3];
+            document.getElementById("price85").innerHTML = valuelist8[4];
+            document.getElementById("price91").innerHTML = valuelist9[0];
+            document.getElementById("price92").innerHTML = valuelist9[1];
+            document.getElementById("price93").innerHTML = valuelist9[2];
+            document.getElementById("price94").innerHTML = valuelist9[3];
+            document.getElementById("price95").innerHTML = valuelist9[4];
+            document.getElementById("price101").innerHTML = valuelist10[0];
+            document.getElementById("price102").innerHTML = valuelist10[1];
+            document.getElementById("price103").innerHTML = valuelist10[2];
+            document.getElementById("price104").innerHTML = valuelist10[3];
+            document.getElementById("price105").innerHTML = valuelist10[4];
 
         }
         if(document.getElementById("choose").options[1].selected){
@@ -298,11 +373,21 @@ function front(data) {
             document.getElementById("name3").innerHTML = responseresultlist[2];
             document.getElementById("name4").innerHTML = responseresultlist[3];
             document.getElementById("name5").innerHTML = responseresultlist[4];
+            document.getElementById("name6").innerHTML = responseresultlist[5];
+            document.getElementById("name7").innerHTML = responseresultlist[6];
+            document.getElementById("name8").innerHTML = responseresultlist[7];
+            document.getElementById("name9").innerHTML = responseresultlist[8];
+            document.getElementById("name10").innerHTML = responseresultlist[9];
             document.getElementById("similar1").innerHTML = similar2[0];
             document.getElementById("similar2").innerHTML = similar2[1];
             document.getElementById("similar3").innerHTML = similar2[2];
             document.getElementById("similar4").innerHTML = similar2[3];
             document.getElementById("similar5").innerHTML = similar2[4];
+            document.getElementById("similar6").innerHTML = similar2[5];
+            document.getElementById("similar7").innerHTML = similar2[6];
+            document.getElementById("similar8").innerHTML = similar2[7];
+            document.getElementById("similar9").innerHTML = similar2[8];
+            document.getElementById("similar10").innerHTML = similar2[9];
             document.getElementById("price11").innerHTML = responsevaluelist1[0];
             document.getElementById("price12").innerHTML = responsevaluelist1[1];
             document.getElementById("price13").innerHTML = responsevaluelist1[2];
@@ -328,7 +413,31 @@ function front(data) {
             document.getElementById("price53").innerHTML = responsevaluelist5[2];
             document.getElementById("price54").innerHTML = responsevaluelist5[3];
             document.getElementById("price55").innerHTML = responsevaluelist5[4];
-            
+            document.getElementById("price61").innerHTML = responsevaluelist6[0];
+            document.getElementById("price62").innerHTML = responsevaluelist6[1];
+            document.getElementById("price63").innerHTML = responsevaluelist6[2];
+            document.getElementById("price64").innerHTML = responsevaluelist6[3];
+            document.getElementById("price65").innerHTML = responsevaluelist6[4];
+            document.getElementById("price71").innerHTML = responsevaluelist7[0];
+            document.getElementById("price72").innerHTML = responsevaluelist7[1];
+            document.getElementById("price73").innerHTML = responsevaluelist7[2];
+            document.getElementById("price74").innerHTML = responsevaluelist7[3];
+            document.getElementById("price75").innerHTML = responsevaluelist7[4];
+            document.getElementById("price81").innerHTML = responsevaluelist8[0];
+            document.getElementById("price82").innerHTML = responsevaluelist8[1];
+            document.getElementById("price83").innerHTML = responsevaluelist8[2];
+            document.getElementById("price84").innerHTML = responsevaluelist8[3];
+            document.getElementById("price85").innerHTML = responsevaluelist8[4];
+            document.getElementById("price91").innerHTML = responsevaluelist9[0];
+            document.getElementById("price92").innerHTML = responsevaluelist9[1];
+            document.getElementById("price93").innerHTML = responsevaluelist9[2];
+            document.getElementById("price94").innerHTML = responsevaluelist9[3];
+            document.getElementById("price95").innerHTML = responsevaluelist9[4];
+            document.getElementById("price101").innerHTML = responsevaluelist10[0];
+            document.getElementById("price102").innerHTML = responsevaluelist10[1];
+            document.getElementById("price103").innerHTML = responsevaluelist10[2];
+            document.getElementById("price104").innerHTML = responsevaluelist10[3];
+            document.getElementById("price105").innerHTML = responsevaluelist10[4];
 }
 }
 }
