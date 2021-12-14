@@ -3,6 +3,8 @@ function front(data) {
     var x, text;
     var result0;
     const keys = Object.keys(data)
+    document.getElementById("introduction").innerHTML = ' ';
+    document.getElementById("p1").innerHTML = ' ';
 
     var dataplot = data
     Data = {}
@@ -21,7 +23,6 @@ function front(data) {
 
     data = Data
 
-    // x = document.getElementById("company").value;
     x = keys[2];
     const companylist = ['CSCO', 'SBGI', 'UFCS', 'GFED', 'AIRT', 'ISSC', 'KNDI', 'TRNS', 'AEIS', 'TROW', 'ISRG',
         'FEIM', 'LECO', 'VCYT', 'ORRF', 'BLDP', 'CHCO', 'SPOK', 'MGEE', 'AMSC', 'XLRN', 'SCYX', 'ASYS', 'HAFC', 'ADTN',
@@ -221,7 +222,7 @@ function front(data) {
     console.log(select)
 
     if (incompany == 0) {
-        const result0 = "Please enter a correct company code.";
+        const result0 = "Please enter a valid company code. We only provide recommendations for stocks with at least 1000 days since public listed.";
         document.getElementById("demo").innerHTML = result0;
         document.getElementById("name1").innerHTML = "";
         document.getElementById("name2").innerHTML = "";
@@ -305,7 +306,7 @@ function front(data) {
         document.getElementById("price105").innerHTML = "";
     } else {
         if (select=='impulse') {
-            document.getElementById("demo").innerHTML = result1;
+            // document.getElementById("demo").innerHTML = result1;
             document.getElementById("name1").innerHTML = resultlist[2];
             document.getElementById("name2").innerHTML = resultlist[3];
             document.getElementById("name3").innerHTML = resultlist[4];
@@ -389,7 +390,7 @@ function front(data) {
 
         }
         if (select=='response') {
-            document.getElementById("demo").innerHTML = result2;
+            // document.getElementById("demo").innerHTML = result2;
             document.getElementById("name1").innerHTML = responseresultlist[2];
             document.getElementById("name2").innerHTML = responseresultlist[3];
             document.getElementById("name3").innerHTML = responseresultlist[4];
