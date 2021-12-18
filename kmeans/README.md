@@ -1,1 +1,1 @@
-
+Run ``` $ python kmeans.py ```
