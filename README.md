@@ -38,6 +38,6 @@ Python, Django, Airflow, HTML, Javascript, Google Cloud Storage.
 **Instruction:**
   1. Download the AnnoyVAR folder.
   2. cd to the folder in the terminal of your local machine.
-  3. Run the command: "python manage.py runserver"
+  3. Run the command: ```$python manage.py runserver```
   4. Use our app at http://127.0.0.1:8000/
 
