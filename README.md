@@ -1,1 +1,3 @@
-# Group17_6893_Final_Project
+# Stock Price Trend Prediction and Relations Between Stocks
+EECS E6893 Final Project
+Group 17
