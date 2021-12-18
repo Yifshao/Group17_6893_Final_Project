@@ -2,7 +2,7 @@
 EECS E6893 Final Project
 Group 17
 
-**Objectives:**
+**Objectives:** \
   It is known that prices of different stocks are correlated; stock prices sometimes move together. Therefore, it is natural to wonder whether stock prices can be predicted using the prices of other stocks. In our project, we aimed to determine the relations between stocks and to predict stock price trends based on the price changes of related stocks. This information can help investors make decisions.
 
 **Innovations:**
