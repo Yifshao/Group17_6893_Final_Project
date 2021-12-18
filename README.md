@@ -1,6 +1,7 @@
 # Stock Price Trend Prediction and Relations Between Stocks
 EECS E6893 Final Project
 Group 17
+
 **Objectives:**
   It is known that prices of different stocks are correlated; stock prices sometimes move together. Therefore, it is natural to wonder whether stock prices can be predicted using the prices of other stocks. In our project, we aimed to determine the relations between stocks and to predict stock price trends based on the price changes of related stocks. This information can help investors make decisions.
 
@@ -21,7 +22,7 @@ Group 17
   c. A recommendation on whether to buy or sell.
 These capabilities are important for investors who want information about what stocks they should invest in, given information about how stock prices are currently changing.
 
-**Dataset: **
+**Dataset:** \
 Our dataset consists of two parts:
 1. The initial data set is from https://www.kaggle.com/paultimothymooney/stock-market-data, The 10 GB dataset contains all historical price information of over 2800 companies in the form of csv and json.
 
@@ -31,7 +32,7 @@ The stock prices are updated by the Airflow scheduler, which runs Yahoo Finance 
 Our software can also support data that come purely from Yahoo Finance.
 
 
-**Language:**
+**Language:** \
 Python, Django, Airflow, HTML, Javascript, Google Cloud Storage.
 
 **Instruction:**
