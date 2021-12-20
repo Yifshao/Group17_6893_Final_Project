@@ -2,6 +2,12 @@
 EECS E6893 Final Project
 Group 17
 
+**Instruction:**
+  1. Download the AnnoyVAR folder.
+  2. cd to the folder in the terminal of your local machine.
+  3. Run the command: ```$python manage.py runserver```
+  4. Use our app at http://127.0.0.1:8000/
+
 **Objectives:** \
   It is known that prices of different stocks are correlated; stock prices sometimes move together. Therefore, it is natural to wonder whether stock prices can be predicted using the prices of other stocks. In our project, we aimed to determine the relations between stocks and to predict stock price trends based on the price changes of related stocks. This information can help investors make decisions.
 
@@ -34,10 +40,4 @@ Our software can also support data that come purely from Yahoo Finance.
 
 **Language:** \
 Python, Django, Airflow, HTML, Javascript, Google Cloud Storage.
-
-**Instruction:**
-  1. Download the AnnoyVAR folder.
-  2. cd to the folder in the terminal of your local machine.
-  3. Run the command: ```$python manage.py runserver```
-  4. Use our app at http://127.0.0.1:8000/
 
